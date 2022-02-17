@@ -31,6 +31,7 @@ async def on_message(msg):
         # TODO: basically everything
         args.pop(0) # remove invocation statement probably
         if args[0] == 'start':
+            # TODO: steal my own wikipedia query code from wikibot
             gamesInProgress[msg.author.id] = next(iter(requests.get('https://en.wikipedia.org/w/api.php', {
                 'action':'query',
                 'generator':'random',
